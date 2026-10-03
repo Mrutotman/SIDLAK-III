@@ -69,57 +69,7 @@ The workspace is organized into modular subsystems covering robot description, s
 
 The SIDLAK III autonomy stack is divided into functional layers:
 
-    ┌─────────────────────────────────────────────────────┐
-    │                 Mission Supervision                 │
-    │              Mission FSM / Safety Logic             │
-    └───────────────────────┬─────────────────────────────┘
-                            │
-    ┌───────────────────────▼─────────────────────────────┐
-    │                    Planning                          │
-    │             Nav2 / Smac Hybrid-A* / Control         │
-    └───────────────────────┬─────────────────────────────┘
-                            │
-    ┌───────────────────────▼─────────────────────────────┐
-    │                   Localization                       │
-    │                 Point-LIO / EKF Fusion              │
-    └───────────────────────┬─────────────────────────────┘
-                            │
-    ┌───────────────────────▼─────────────────────────────┐
-    │                    Perception                        │
-    │      LiDAR Processing / YOLO / OpenCV / Obstacles   │
-    └───────────────────────┬─────────────────────────────┘
-                            │
-    ┌───────────────────────▼─────────────────────────────┐
-    │                     Sensors                          │
-    │              Unitree L2 / Intel Depth Camera        │
-    └───────────────────────┬─────────────────────────────┘
-                            │
-    ┌───────────────────────▼─────────────────────────────┐
-    │              Vehicle Interface                       │
-    │              Arbitration / SocketCAN                │
-    └─────────────────────────────────────────────────────┘
-
 ### Simulation Data Flow
-
-    Gazebo Digital Twin
-            │
-            ▼
-    Sensor Simulation
-            │
-            ▼
-    Perception ──────► Localization
-            │                │
-            └───────┬────────┘
-                    ▼
-                Planning
-                    │
-                    ▼
-               Arbitration
-                    │
-                    ▼
-            Simulated Vehicle
-
----
 
 # 🛠️ Developer Quick Reference
 
